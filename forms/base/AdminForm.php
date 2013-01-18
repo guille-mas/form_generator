@@ -2,7 +2,9 @@
 require_once dirname(__FILE__).'/DoctrineForm.php';
 require_once APPPATH.'libraries/MY_Upload.php';
 
-
+/**
+ * @author Guillermo Maschwitz <guillermo.maschwitz@gmail.com>
+ */
 class AdminForm extends DoctrineForm
 {
 
@@ -10,7 +12,7 @@ class AdminForm extends DoctrineForm
 	 * This method is working right now, but is not secure, nor practic, to base the filename format of the uploaded file by the unique and primary keys fields of the model
 	 * @param FormField $field
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function uploadFile(FormField $field)
 	{

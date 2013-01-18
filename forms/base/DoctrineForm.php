@@ -4,14 +4,14 @@ require_once dirname(__FILE__).'/AbstractModelForm.php';
 /**
  * class that implements a common basic constructor and methods to retrieve data from a DoctrineForm
  *
- * @author Guillermo Maschwitz 
+ * @author Guillermo Maschwitz <guillermo.maschwitz@gmail.com>
  */
 class DoctrineForm extends AbstractModelForm{
 
 	/**
 	 * adding features to parent::loadPostData()
 	 * @return boolean
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function loadPostData()
 	{
@@ -48,7 +48,7 @@ class DoctrineForm extends AbstractModelForm{
 	/**
 	 * Given this->object attribute <> NULL , set each Formfield value to the value of each object attribute
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function hydrateFormWithObjectAttributes()
 	{
@@ -95,7 +95,7 @@ class DoctrineForm extends AbstractModelForm{
 	/**
 	 * Add fields to the Form instance from a Doctrine model definition
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function loadFieldsFromModel(){
 		$table = Doctrine::getTable($this->modelClass);
@@ -136,7 +136,7 @@ class DoctrineForm extends AbstractModelForm{
 	 * Persist the nested active record object into database
 	 * Also support many-to-many relationships
 	 * @return boolean
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function save()
 	{
@@ -249,7 +249,7 @@ class DoctrineForm extends AbstractModelForm{
 
 	/**
 	 * Template method to hook into the process of uploading files
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	protected function preSave(){}
 
@@ -258,7 +258,7 @@ class DoctrineForm extends AbstractModelForm{
 	/**
 	 * Load relations data from model definition
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function loadRelationsDataFromModel(){
 		$table = Doctrine::getTable($this->modelClass);
@@ -299,7 +299,7 @@ class DoctrineForm extends AbstractModelForm{
 	 * @param string $assocPrimaryKey
 	 * @param string $assocLabelColumn
 	 * @return array
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public static function fetchItemsForSelectBox($modelClass, $assocPrimaryKey = null, $assocLabelColumn = null)
 	{
@@ -357,7 +357,7 @@ class DoctrineForm extends AbstractModelForm{
 	/**
 	 * Load an object of class $this->className by id into this object attribute
 	 * @param int $id
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function loadObjectById($id)
 	{

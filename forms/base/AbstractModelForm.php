@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'/Form.php';
 /**
  * Abstract class that implements a common basic constructor and methods to retrieve data from a DoctrineForm
  *
- * @author Guillermo Maschwitz 
+ * @author Guillermo Maschwitz <guillermo.maschwitz@gmail.com>
  */
 abstract class AbstractModelForm extends Form{
 
@@ -15,7 +15,7 @@ abstract class AbstractModelForm extends Form{
 
 	/*
 	 * Constructor
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function __construct($modelClassName = null)
 	{
@@ -36,13 +36,13 @@ abstract class AbstractModelForm extends Form{
 
 	/**
 	 * Template method to define the form
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	protected function setUp(){}
 
 	/**
 	 * Template method
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	protected function postModelLoad(){}
 
@@ -55,7 +55,7 @@ abstract class AbstractModelForm extends Form{
 
 	/**
 	 * Template method to hook into the process of uploading files
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	protected function preSave(){}
 
@@ -70,7 +70,7 @@ abstract class AbstractModelForm extends Form{
 	/**
 	 * Given this->object attribute <> NULL , set each Formfield value to the value of each object attribute
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	abstract protected function hydrateFormWithObjectAttributes();
 
@@ -79,7 +79,7 @@ abstract class AbstractModelForm extends Form{
 	 * Add fields to the Form instance from a Doctrine model definition
 	 *
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	abstract public function loadFieldsFromModel();
 
@@ -91,7 +91,7 @@ abstract class AbstractModelForm extends Form{
 	 * Also support many-to-many relationships
 	 *
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	abstract public function save();
 
@@ -102,7 +102,7 @@ abstract class AbstractModelForm extends Form{
 	 * Load relations data from model definition
 	 *
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	abstract public function loadRelationsDataFromModel();
 
@@ -114,7 +114,7 @@ abstract class AbstractModelForm extends Form{
 	 * @param string $modelClass
 	 * @param string $assocPrimaryKey is the name of the primary key column
 	 * @param string $assocLabelColumn is the name of the column where the label data will be taken
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	abstract public static function fetchItemsForSelectBox($modelClass, $assocPrimaryKey = null, $assocLabelColumn = null);
 
@@ -123,7 +123,7 @@ abstract class AbstractModelForm extends Form{
 	/**
 	 * Load an object of class $this->className by id into this object attribute
 	 * @param resource $id
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	abstract public function loadObjectById($id);
 
@@ -135,7 +135,7 @@ abstract class AbstractModelForm extends Form{
 	/**
 	 * ModelClass attribute getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function getModelClass()
 	{
@@ -145,7 +145,7 @@ abstract class AbstractModelForm extends Form{
 
 	/**
 	 * Return an array representation of the instance
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function toArray()
 	{
@@ -169,7 +169,7 @@ abstract class AbstractModelForm extends Form{
 	 * Set this->object equal to some object
 	 * @param $object
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function loadObject($object)
 	{
@@ -192,7 +192,7 @@ abstract class AbstractModelForm extends Form{
 	/**
 	 * Check if an active record object has been loaded
 	 * @return boolean
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function hasObject()
 	{
@@ -207,7 +207,7 @@ abstract class AbstractModelForm extends Form{
 	/**
 	 * this object attribute getter
 	 * @return Object
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function getObject()
 	{

@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'/FormField.php';
 /**
  * class with the implementation of the basic methods for all forms
  *
- * @author Guillermo Maschwitz 
+ * @author Guillermo Maschwitz <guillermo.maschwitz@gmail.com>
  */
 class Form
 {
@@ -19,7 +19,7 @@ class Form
 	/**
 	 * returns a representation of the instance as an array
 	 * @return array
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function toArray()
 	{
@@ -46,7 +46,7 @@ class Form
 	 * Fields attribute getter
 	 * Return an array of FormFields
 	 * @return array
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function getFields()
 	{
@@ -58,7 +58,7 @@ class Form
 	 * Specific field getter
 	 * Returns a Formfield by id from this Form fields attribute
 	 * @return Formfield
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function getField($fieldId){
 		if($this->hasField($fieldId)){
@@ -71,7 +71,7 @@ class Form
 	 * Check if some FormField exist into the Form instance fields by id
 	 * @param string $fieldId
 	 * @return boolean
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function hasField($fieldId){
 		if(isset($this->fields[$fieldId])){
@@ -85,7 +85,7 @@ class Form
 	 * 
 	 * @return string
 	 * @todo finish the separation of views from Form controllers classes
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function buildHTML()
 	{
@@ -98,7 +98,7 @@ class Form
 	 *
 	 * @TODO This method is too large! Each field output should be handled at each field instances, but for that there should be subclasses for each type of Field.
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function buildForm()
 	{
@@ -312,7 +312,7 @@ class Form
 	/**
 	 * Load data from POST and set the corresponding fields
 	 * @return boolean
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function loadPostData()
 	{
@@ -347,7 +347,7 @@ class Form
 	/**
 	 * Validate data sent by post
 	 * @return boolean
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function isValid()
 	{
@@ -375,7 +375,7 @@ class Form
 	/**
 	 * this actionUrl setter
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function setActionUrl($actionUrl)
 	{
@@ -387,7 +387,7 @@ class Form
 	/**
 	 * actionUrl getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function getActionUrl()
 	{
@@ -402,7 +402,7 @@ class Form
 	 * @param string $field
 	 * @param boolean $useParagraph
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	private function formatField($fieldKey, $label = '', $field, $useParagraph = true)
 	{
@@ -422,7 +422,7 @@ class Form
 	 * Returns a formated string
 	 * @param $string string
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	private function formatLabel($string)
 	{
@@ -440,7 +440,7 @@ class Form
 	 * @param string $afterField
 	 * @return FormField
 	 * @throw FormException
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function addField(FormField $field, $afterField = null)
 	{
@@ -473,7 +473,7 @@ class Form
 	 * Remove FormFields from this fields collection by an array of field ids
 	 * @param array $fieldIds
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function removeFields(array $fieldIds)
 	{
@@ -489,7 +489,7 @@ class Form
 	 * Remove FormFields from this fields collection by an array of field ids
 	 * @param string $fieldId
 	 * @return null
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	public function removeField($fieldId)
 	{

@@ -2,7 +2,8 @@
 
 /**
  * The FormField class
- * @author Guillermo Maschwitz 
+ *  
+ * @author Guillermo Maschwitz <guillermo.maschwitz@gmail.com>
  */
 class FormField {
 	protected $type;
@@ -21,8 +22,7 @@ class FormField {
 	 * @param string $id
 	 * @param string $type
 	 * @param array $attributes
-	 * @param array $options
-	 * @author Guillermo Maschwitz 
+	 * @param array $options 
 	 */
 	public function __construct($id, $type = null, $attributes = null, $options = array()){
 		$this->setType($type);
@@ -81,8 +81,7 @@ class FormField {
 	
 	/**
 	 * Getter
-	 * @return string
-	 * @author Guillermo Maschwitz 
+	 * @return string 
 	 */
 	function getType(){
 		return $this->type;
@@ -91,7 +90,6 @@ class FormField {
 	/**
 	 * Getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
 	 */
 	function getId(){
 		return $this->id;
@@ -100,7 +98,7 @@ class FormField {
 	/**
 	 * Getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function getName(){
 		return $this->name;
@@ -109,7 +107,7 @@ class FormField {
 	/**
 	 * Getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function getLabel(){
 		if($this->getAttribute('notnull')==true or $this->getAttribute('required')==true){
@@ -122,7 +120,7 @@ class FormField {
 	/**
 	 * Getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function getValue(){
 		return $this->value;
@@ -131,7 +129,7 @@ class FormField {
 	/**
 	 * Getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function getOptions(){
 		return $this->options;
@@ -140,7 +138,7 @@ class FormField {
 	/**
 	 * Getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function getAttributes(){
 		return $this->attributes;
@@ -149,7 +147,7 @@ class FormField {
 	/**
 	 * Getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function getAttribute($attributeName){
 		if(isset($this->attributes[$attributeName])){
@@ -161,7 +159,7 @@ class FormField {
 	/**
 	 * Return true if given attribute name is found on instance attributes
 	 * @return boolean
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function hasAttribute($attributeName){
 		if(isset($this->attributes[$attributeName])){
@@ -174,7 +172,7 @@ class FormField {
 	/**
 	 * Getter
 	 * @return string
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function getClasses(){
 		return $this->cssClasses;
@@ -185,7 +183,7 @@ class FormField {
 	 * Return true if given name exists between cssClasses instance attribute
 	 * @param string
 	 * @return boolean
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function hasClass($name){
 		if(isset($this->cssClasses[$name])){
@@ -200,7 +198,7 @@ class FormField {
 	 * Setter
 	 * @param string $arg
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function setType($arg){
 		$this->type = $arg;
@@ -213,7 +211,7 @@ class FormField {
 	 * Setter
 	 * @param string $arg
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function setId($arg){
 		$this->id = $arg;
@@ -225,7 +223,7 @@ class FormField {
 	 * Setter
 	 * @param string $arg
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function setName($arg){
 		$this->name = $arg;
@@ -237,7 +235,7 @@ class FormField {
 	 * Setter
 	 * @param string $arg
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function setLabel($arg){
 		$this->label = $arg;
@@ -249,7 +247,7 @@ class FormField {
 	 * Setter
 	 * @param string $arg
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function setValue($arg){
 		$this->value = $arg;
@@ -261,7 +259,7 @@ class FormField {
 	 * setter
 	 * @param array $optionsArray
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function setOptions($optionsArray){
 		$this->options = $optionsArray;
@@ -273,7 +271,7 @@ class FormField {
 	 * Add an option
 	 * @param array $optionsArray
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function addOptions($optionsArray){
 		if(!empty($this->options)){
@@ -290,7 +288,7 @@ class FormField {
 	 * Add an option
 	 * @param array $optionsArray
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function addAttribute($name,$value){
 		$this->attributes[$name] = $value;
@@ -301,7 +299,7 @@ class FormField {
 	 * Instance attibutes setter
 	 * @param array
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function setAttributes(array $attributesArray){
 		$this->attributes = $attributesArray;
@@ -312,7 +310,7 @@ class FormField {
 	 * Instance attibutes setter for one item
 	 * @param array
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function setAttribute($attributeName, $value){
 		$this->attributes[$attributeName] = $value;
@@ -323,7 +321,7 @@ class FormField {
 	 * Add a css class to instance
 	 * @param array
 	 * @return FormField
-	 * @author Guillermo Maschwitz 
+	 *  
 	 */
 	function addClass($name){
 		$this->cssClasses[] = $name;
